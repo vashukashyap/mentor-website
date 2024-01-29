@@ -10,6 +10,7 @@ import PersonCard from "./components/PersonCard/PersonCard";
 import { tagsData } from "./utils/constant";
 import PersonFulInfoCard from "./components/PersonFullInfoCard/PersonFullInfoCard";
 import ResultNotFound from "./components/resultNotFound/ResultNotFound";
+import Profile from "./components/profile/Profile";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         sectionLogo={SectionLogo}
         sectionTitle="My Sessions"
       />
-      <Jumboster image={JumbosterBackground} personName='Atul'/>
+      {/* <Jumboster image={JumbosterBackground} personName='Atul'/>
       <SearchMentor
         title="Who are you looking for?"
         searchDescription="Describe in 1-2 lines"
@@ -44,7 +45,16 @@ function App() {
           info="Feeling burned out? After years of working with CEOs, Heads of Growth, & Marketers from all over the world, I have stories & experience ready to support you on your growth journey. I'll help you identify your biggest opportunities for sustainable growth for yourself and/or your business."
           tags={tagsData}
         />
-      </h1>
+      </h1> */}
+      <Profile
+        image={Person}
+        name="Ryan Carruthers"
+        subtitle="Enterprise SEO & Content Marketer With a Passion for SaaS, eLearning, eCommerce | Founder @ Conversion Media"
+        bio="Feeling burned out? After years of working with CEOs, Heads of Growth, & Marketers from all over the world, I have stories & experience ready to support you on your growth journey. I'll help you identify your biggest opportunities for sustainable growth for yourself and/or your business."
+        company="Cuvette"
+        lookingFor="I have stories & experience ready to support you on your growth journey. I'll help you identify your biggest opportunities for sustainable growth for yourself and/or your business."
+        link='https://www.linkedin.com/in/dewank-rastogi-0322961b2/'
+      />
     </div>
   );
 }

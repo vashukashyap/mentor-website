@@ -21,7 +21,7 @@ const Navbar = ({ logo, sectionLogo, sectionTitle }) => {
             </a>
           </section>
           <div className="flex flex-row gap-6">
-          <button type="button" class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center">Browse Mentors</button>
+          <button type="button" className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 py-2 text-center">Browse Mentors</button>
             <button>
               <Icon icon="system-uicons:bell" className="text-4xl" />
             </button>
