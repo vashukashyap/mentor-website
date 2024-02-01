@@ -1,7 +1,11 @@
+import Tags from "../tags/Tags";
 import { useState } from "react";
 
 const SearchMentor = ({ title, searchDescription }) => {
   const [searchActive, setSearchActive] = useState(false);
+  const [selectedTags, setSelectedTags] = useState([]);
+
+
 
   return (
     <>
@@ -13,15 +17,16 @@ const SearchMentor = ({ title, searchDescription }) => {
         >
           {title}
         </label>
-        <div className="flex flex-col w-full">
-          {searchActive && (
-            <button
-              type="button"
-              className="px-10 py-[2px] w-fit self-end absolute text-lg h-fit font-medium text-center text-white bg-[#189EFF] rounded-xl focus:ring-4 focus:outline-none focus:ring-blue-300"
-            >
-              Search
-            </button>
-          )}
+        <div className="flex flex-row w-full border-b-2 border-gray-400
+                      text-gray-600">
+          {
+            selectedTags.map((tag,index) => {
+              return(
+                <Tags text={tag} key={index} selected/>
+              )
+            })
+          }
+          
           <input
             onFocus={() => {
               setSearchActive(true);
@@ -33,10 +38,18 @@ const SearchMentor = ({ title, searchDescription }) => {
             id="search"
             name="mentor"
             placeholder={searchDescription}
-            className="flex pt-2 border-b-2 border-gray-400
+            className="pt-2
                       text-gray-600 placeholder-gray-400
-                      outline-none my-2"
+                      outline-none w-[100%]"
           />
+          {searchActive && (
+            <button
+              type="button"
+              className="px-10 py-[2px] mb-2 w-fit self-end text-lg h-fit font-medium text-center text-white bg-[#189EFF] rounded-xl focus:ring-4 focus:outline-none focus:ring-blue-300"
+            >
+              Search
+            </button>
+          )}
         </div>
       </div>
     </>
